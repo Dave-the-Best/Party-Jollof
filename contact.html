@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Contact Us - Party Jollof</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🍽️</div>
+        <ul class="nav-links">
+            <li><a href="website.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="order-btn" onclick="window.location.href='menu.html'">Order Now</button>
+    </nav>
+    
+    <section class="contact-hero">
+        <h1>Get In Touch With <span class="orange">Party Jollof</span></h1>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, we're here to help.</p>
+    </section>
+
+    <div class="contact-container">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-grid">
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <h3>Phone</h3>
+                <p>+234 803 123 4567</p>
+                <p>+234 806 987 6543</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <h3>Email</h3>
+                <p>info@partyjollof.com</p>
+                <p>orders@partyjollof.com</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Address</h3>
+                <p>123 Jollof Street</p>
+                <p>Lagos, Nigeria</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🕐</div>
+                <h3>Hours</h3>
+                <p>Mon - Fri: 9AM - 10PM</p>
+                <p>Sat - Sun: 10AM - 11PM</p>
+            </div>
+        </div>
+
+        <!-- Forms Section -->
+        <div class="forms-section">
+            <!-- Send Message Form -->
+            <div class="form-card">
+                <h2>💬 Send us a Message</h2>
+                <div id="message-success" class="success-message">Message sent successfully! We'll get back to you soon.</div>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="message-name">Your Name *</label>
+                        <input type="text" id="message-name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-email">Your Email *</label>
+                        <input type="email" id="message-email" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-subject">Subject *</label>
+                        <input type="text" id="message-subject" required placeholder="What is this regarding?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-text">Message *</label>
+                        <textarea id="message-text" required placeholder="Tell us more..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+             <!-- Review Form -->
+            <div class="form-card">
+                <h2>⭐ Leave a Review</h2>
+                <div id="review-success" class="success-message">Thank you for your review! We appreciate your feedback.</div>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="review-name">Your Name *</label>
+                        <input type="text" id="review-name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-email">Your Email *</label>
+                        <input type="email" id="review-email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating *</label>
+                        <div class="rating-stars" id="ratingStars">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating-value" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-category">Review Category *</label>
+                        <select id="review-category" required>
+                            <option value="">Select a category</option>
+                            <option value="food-quality">Food Quality</option>
+                            <option value="delivery">Delivery Service</option>
+                            <option value="customer-service">Customer Service</option>
+                            <option value="value">Value for Money</option>
+                            <option value="overall">Overall Experience</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-text">Your Review *</label>
+                        <textarea id="review-text" required placeholder="Share your experience with us..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Review</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h3>Connect With Us on Social Media</h3>
+            <p>Follow us for the latest updates, special offers, and delicious food photos!</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook" title="Facebook">
+                    <span>f</span>
+                </a>
+                <a href="#" class="social-icon instagram" title="Instagram">
+                    <span>📷</span>
+                </a>
+                <a href="#" class="social-icon twitter" title="Twitter">
+                    <span>🐦</span>
+                </a>
+                <a href="#" class="social-icon whatsapp" title="WhatsApp">
+                    <span>💬</span>
+                </a>
+            </div>
+        </div>        
+    </div> 
+    
+    <script src="app.js"></script>
+</body>
+</html>

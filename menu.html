@@ -1,0 +1,352 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Menu - Party Jollof</title>
+</head>
+<body style="background: #2a2a2a;">
+    <!--Nav Bar-->
+    <nav class="navbar">
+        <div class="logo">🍽️</div>
+        <ul class="nav-links">
+            <li><a href="website.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="order-btn" onclick="viewCart()">View Cart</button>
+    </nav>
+
+    <div class="menu-container">
+        <!--Menu Header-->
+        <section class="section-header">
+            <h2>Menu</h2>
+        </section>
+
+        <!--Main Course Section-->
+        <section class="main-course-section">
+            <h3 class="section-header" style="color: var(--primary-orange); font-size: 1.5rem; margin-bottom: 1rem;">Choose Order</h3>
+
+            <div class="course-grid">
+                <div class="course-card" data-item="chicken-jollof">
+                    <img src="images/jollof and chicken.jpg" alt="Jollof Rice & Chicken">
+                    <div class="cart-controls">
+                        <button class="cart-btn" onclick="decreaseItem(event, 'chicken-jollof')">−</button>
+                        <div class="item-quantity" id="chicken-jollof-qty">0</div>
+                        <button class="cart-btn" onclick="increaseItem(event, 'chicken-jollof', 14.25)">+</button>
+                    </div>
+                    <div class="course-overlay">
+                        <h3>Jollof Rice & Chicken</h3>
+                        <p>smoky jollof with roasted chicken</p>
+                        <p class="price">$14.25</p>
+                    </div>
+                </div>
+
+                <div class="course-card" data-item="fish-jollof">
+                    <img src="images/jollof and fish.jpeg" alt="Jollof Rice & Fish">
+                    <div class="cart-controls">
+                        <button class="cart-btn" onclick="decreaseItem(event, 'fish-jollof')">−</button>
+                        <div class="item-quantity" id="fish-jollof-qty">0</div>
+                        <button class="cart-btn" onclick="increaseItem(event, 'fish-jollof', 35.75)">+</button>
+                    </div>
+                    <div class="course-overlay">
+                        <h3>Jollof Rice & Fish</h3>
+                        <p>Classic Nigerian Jollof with Fried Fish</p>
+                        <p class="price">$35.75</p>
+                    </div>
+                </div>
+
+                <div class="course-card" data-item="goat-jollof">
+                    <img src="images/jollof and goat.jpg" alt="Jollof Rice & Goat Meat">
+                    <div class="cart-controls">
+                        <button class="cart-btn" onclick="decreaseItem(event, 'goat-jollof')">−</button>
+                        <div class="item-quantity" id="goat-jollof-qty">0</div>
+                        <button class="cart-btn" onclick="increaseItem(event, 'goat-jollof', 42.50)">+</button>
+                    </div>
+                    <div class="course-overlay">
+                        <h3>Jollof Rice & Goat Meat</h3>
+                        <p>Savoury jollof with assorted goat meats</p>
+                        <p class="price">$42.50</p>
+                    </div>
+                </div>
+
+                <div class="course-card" data-item="turkey-jollof">
+                    <img src="images/jollof and turkey.jpg" alt="Jollof & Turkey">
+                    <div class="cart-controls">
+                        <button class="cart-btn" onclick="decreaseItem(event, 'turkey-jollof')">−</button>
+                        <div class="item-quantity" id="turkey-jollof-qty">0</div>
+                        <button class="cart-btn" onclick="increaseItem(event, 'turkey-jollof', 55.70)">+</button>
+                    </div>
+                    <div class="course-overlay">
+                        <h3>Jollof & Turkey</h3>
+                        <p>Delicious Jollof with sauced turkey</p>
+                        <p class="price">$55.70</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Portion Size Selector-->
+            <div class="portion-size-box">
+                <h3>Select Your Portion Size</h3>
+                <div class="portion-options">
+                    <div class="portion-option active" onclick="selectPortion(this, 'small')">
+                        <h4>Small</h4>
+                        <p class="serves">Serves 1 person</p>
+                        <p class="price">$12.99</p>
+                    </div>
+                    <div class="portion-option" onclick="selectPortion(this, 'medium')">
+                        <h4>Medium</h4>
+                        <p class="serves">Serves 2-3 people</p>
+                        <p class="price">$24.99</p>
+                    </div>
+                    <div class="portion-option" onclick="selectPortion(this, 'large')">
+                        <h4>Large</h4>
+                        <p class="serves">Serves 4-5 people</p>
+                        <p class="price">$39.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Available Sides Carousel-->
+        <section class="sides-carousel">
+            <h3 class="carousel-header">Available-Sides</h3>
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="slideCarousel(-1)">‹</button>
+                <button class="carousel-nav next" onclick="slideCarousel(1)">›</button>
+
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/Gizzard.jpg" alt="Gizzard">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Gizzard</h4>
+                            <p class="price">$33.50</p>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/moin moin.jpg" alt="Moin-moin">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Moin-moin</h4>
+                            <p class="price">$42.50</p>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/plantain.jpg" alt="Plantain">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Plantain</h4>
+                            <p class="price">$28.30</p>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/ponmo.jpg" alt="Ponmo">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Ponmo</h4>
+                            <p class="price">$35.75</p>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/suya.jpg" alt="Suya">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Suya</h4>
+                            <p class="price">$26.70</p>
+                        </div>
+                    </div>
+
+                    <div class="side-card">
+                        <div class="side-card-image">
+                            <img src="images/salad.jpg" alt="Creamy Salad">
+                            <div class="side-card-border"></div>
+                        </div>
+                        <div class="side-card-content">
+                            <h4>Creamy Salad</h4>
+                            <p class="price">$25.50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Sides Grid Section-->
+        <section class="sides-grid-section">
+            <div class="section-header">
+                <h2>All Sides</h2>
+            </div>
+
+            <div class="sides-grid">
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/Gizzard.jpg" alt="Gizzard">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Gizzard</h4>
+                        <p class="price">$33.50</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/ponmo.jpg" alt="Ponmo">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Ponmo</h4>
+                        <p class="price">$35.75</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/moin moin.jpg" alt="Moin-moin">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Moin-moin</h4>
+                        <p class="price">$42.50</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/plantain.jpg" alt="Plantain">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Plantain</h4>
+                        <p class="price">$28.30</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/suya.jpg" alt="Suya">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Suya</h4>
+                        <p class="price">$26.70</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/salad.jpg" alt="Creamy Salad">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Creamy Salad</h4>
+                        <p class="price">$25.50</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Drinks Section-->
+        <section class="drinks-section">
+            <h3 class="drinks-header">Add Drinks to Your Order</h3>
+            <div class="sides-grid">
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/maltina.jpg" alt="Maltina">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Maltina</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 0.5rem;">Refreshing malt drink</p>
+                        <p class="price">$5.50</p>
+                    </div>
+                </div>
+
+                <div class="side-grid-card">
+                    <div class="side-grid-image">
+                        <img src="images/maltina.jpg" alt="Soft Drinks">
+                    </div>
+                    <div class="side-grid-content">
+                        <h4>Soft Drinks</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 0.5rem;">Chilled soft drinks</p>
+                        <p class="price">$4.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="cart-summary" onclick="viewCart()">
+        <span>🛒 View Cart</span>
+        <div class="cart-count" id="cart-count">0</div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#support">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <div class="social-icon">→</div>
+                    <div class="footer-contact">
+                        <p class="footer-brand">Jollof Joy</p>
+                        <a href="mailto:info@partyjollof.com" class="footer-email">info@partyjollof.com</a>
+                    </div>
+                    <div class="footer-profile">
+                        <img src="images/jollof and chicken.jpg" alt="Profile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-marquee">
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <span class="marquee-text">AUTHENTIC TASTE 🔥 CUSTOMER FAVORITES ❤️ ORDER NOW 🍽️</span>
+                        <span class="marquee-text">AUTHENTIC TASTE 🔥 CUSTOMER FAVORITES ❤️ ORDER NOW 🍽️</span>
+                        <span class="marquee-text">AUTHENTIC TASTE 🔥 CUSTOMER FAVORITES ❤️ ORDER NOW 🍽️</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>COPYRIGHT © 2025 PARTY JOLLOF. ALL RIGHTS RESERVED.</p>
+                <div class="footer-links">
+                    <a href="#privacy">PRIVACY POLICY</a>
+                    <span>|</span>
+                    <a href="#terms">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+
+       <!-- <button class="chat-button">
+            <span class="chat-text">New</span>
+            <span class="chat-icon">💬</span>
+        </button>
+    </footer> -->
+
+    <script src="app.js"></script>
+</body>
+</html>
