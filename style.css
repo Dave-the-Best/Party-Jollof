@@ -303,7 +303,78 @@ body {
 
 .apply-btn {
     background: var(--primary-orange);
-    color: ;
+    color: var(--white);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,87,34,0.3);
+}
+
+.checkout-btn:disabled {
+    background: var(--gray-text);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.comtinue-shopping {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: 1rem;
+    }
+
+    .item-controls {
+        grid-column: 2;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .cart-hero h1 {
+        font-size: 1.8rem;
+    }
 }
 
 .contact-hero {
